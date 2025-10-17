@@ -1,0 +1,4 @@
+C:\Users\veroni4ka\OneDrive\Рабочий стол\ConsoleApp4\ConsoleApp4\obj\Debug\net9.0\ConsoleApp4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\veroni4ka\OneDrive\Рабочий стол\ConsoleApp4\ConsoleApp4\obj\Debug\net9.0\ConsoleApp4.AssemblyInfoInputs.cache
+C:\Users\veroni4ka\OneDrive\Рабочий стол\ConsoleApp4\ConsoleApp4\obj\Debug\net9.0\ConsoleApp4.AssemblyInfo.cs
+C:\Users\veroni4ka\OneDrive\Рабочий стол\ConsoleApp4\ConsoleApp4\obj\Debug\net9.0\ConsoleApp4.csproj.CoreCompileInputs.cache
