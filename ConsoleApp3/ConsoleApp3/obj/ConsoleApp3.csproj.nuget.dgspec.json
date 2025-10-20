@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\veroni4ka\\OneDrive\\Рабочий стол\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj": {}
+    "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\veroni4ka\\OneDrive\\Рабочий стол\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj": {
+    "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\veroni4ka\\OneDrive\\Рабочий стол\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj",
+        "projectUniqueName": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj",
         "projectName": "ConsoleApp3",
-        "projectPath": "C:\\Users\\veroni4ka\\OneDrive\\Рабочий стол\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj",
+        "projectPath": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj",
         "packagesPath": "C:\\Users\\veroni4ka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\veroni4ka\\OneDrive\\Рабочий стол\\ConsoleApp3\\ConsoleApp3\\obj\\",
+        "outputPath": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

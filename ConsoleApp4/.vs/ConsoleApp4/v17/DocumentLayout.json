@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|c:\\csharplabrep\\consoleapp4\\consoleapp4\\consoleapp4.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\consoleapp4.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|c:\\csharplabrep\\consoleapp4\\consoleapp4\\gift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\gift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,20 +15,20 @@
       "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\sweets\\cookie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|c:\\csharplabrep\\consoleapp4\\consoleapp4\\sweets\\jellycandy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\sweets\\jellycandy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|c:\\csharplabrep\\consoleapp4\\consoleapp4\\sweets\\caramel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\sweets\\caramel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|c:\\csharplabrep\\consoleapp4\\consoleapp4\\sweets\\sweets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\sweets\\sweets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|c:\\csharplabrep\\consoleapp4\\consoleapp4\\sweets\\chocolate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\sweets\\chocolate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|c:\\csharplabrep\\consoleapp4\\consoleapp4\\sweets\\sweets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\sweets\\sweets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|c:\\csharplabrep\\consoleapp4\\consoleapp4\\sweets\\caramel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\sweets\\caramel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|c:\\csharplabrep\\consoleapp4\\consoleapp4\\sweets\\jellycandy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3195F465-6AC4-4AA3-BEFA-995793BE6166}|ConsoleApp4\\ConsoleApp4.csproj|solutionrelative:consoleapp4\\sweets\\jellycandy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -52,46 +48,46 @@
               "RelativeDocumentMoniker": "ConsoleApp4\\Program.cs",
               "ToolTip": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Program.cs",
               "RelativeToolTip": "ConsoleApp4\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T14:35:12.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Gift.cs",
               "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Gift.cs",
               "RelativeDocumentMoniker": "ConsoleApp4\\Gift.cs",
               "ToolTip": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Gift.cs",
               "RelativeToolTip": "ConsoleApp4\\Gift.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T14:30:17.373Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Cookie.cs",
               "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Sweets\\Cookie.cs",
               "RelativeDocumentMoniker": "ConsoleApp4\\Sweets\\Cookie.cs",
               "ToolTip": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Sweets\\Cookie.cs",
               "RelativeToolTip": "ConsoleApp4\\Sweets\\Cookie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T14:28:37.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "JellyCandy.cs",
               "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Sweets\\JellyCandy.cs",
               "RelativeDocumentMoniker": "ConsoleApp4\\Sweets\\JellyCandy.cs",
               "ToolTip": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Sweets\\JellyCandy.cs",
               "RelativeToolTip": "ConsoleApp4\\Sweets\\JellyCandy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T14:28:13.968Z",
               "EditorCaption": ""
@@ -104,46 +100,33 @@
               "RelativeDocumentMoniker": "ConsoleApp4\\Sweets\\Caramel.cs",
               "ToolTip": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Sweets\\Caramel.cs",
               "RelativeToolTip": "ConsoleApp4\\Sweets\\Caramel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T14:27:57.571Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Chocolate.cs",
               "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Sweets\\Chocolate.cs",
               "RelativeDocumentMoniker": "ConsoleApp4\\Sweets\\Chocolate.cs",
               "ToolTip": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Sweets\\Chocolate.cs",
               "RelativeToolTip": "ConsoleApp4\\Sweets\\Chocolate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T14:27:40.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConsoleApp4",
-              "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\ConsoleApp4.csproj",
-              "RelativeDocumentMoniker": "ConsoleApp4\\ConsoleApp4.csproj",
-              "ToolTip": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\ConsoleApp4.csproj",
-              "RelativeToolTip": "ConsoleApp4\\ConsoleApp4.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-20T14:26:22.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Sweets.cs",
               "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Sweets\\Sweets.cs",
               "RelativeDocumentMoniker": "ConsoleApp4\\Sweets\\Sweets.cs",
               "ToolTip": "C:\\csharplabrep\\ConsoleApp4\\ConsoleApp4\\Sweets\\Sweets.cs",
               "RelativeToolTip": "ConsoleApp4\\Sweets\\Sweets.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-17T12:32:49.908Z",
               "EditorCaption": ""

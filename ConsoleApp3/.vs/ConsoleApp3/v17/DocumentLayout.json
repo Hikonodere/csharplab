@@ -1,34 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\",
+  "WorkspaceRootPath": "C:\\csharplabrep\\ConsoleApp3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\users\\veroni4ka\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\consoleapp3\\consoleapp3\\textparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\textparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\users\\veroni4ka\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\consoleapp3\\consoleapp3\\models\\text.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\models\\text.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\users\\veroni4ka\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\consoleapp3\\consoleapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\csharplabrep\\consoleapp3\\consoleapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\users\\veroni4ka\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\consoleapp3\\consoleapp3\\models\\punctuation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\models\\punctuation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\csharplabrep\\consoleapp3\\consoleapp3\\textparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\textparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\users\\veroni4ka\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\consoleapp3\\consoleapp3\\models\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\models\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\csharplabrep\\consoleapp3\\consoleapp3\\models\\sentence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\models\\sentence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\users\\veroni4ka\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\consoleapp3\\consoleapp3\\models\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\csharplabrep\\consoleapp3\\consoleapp3\\models\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\models\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\users\\veroni4ka\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\consoleapp3\\consoleapp3\\models\\sentence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\models\\sentence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\csharplabrep\\consoleapp3\\consoleapp3\\models\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\models\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\csharplabrep\\consoleapp3\\consoleapp3\\models\\punctuation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\models\\punctuation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|c:\\csharplabrep\\consoleapp3\\consoleapp3\\models\\text.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162A4088-04DE-4284-AAEC-C117E007CC9E}|ConsoleApp3\\ConsoleApp3.csproj|solutionrelative:consoleapp3\\models\\text.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,27 +38,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Program.cs",
+              "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Program.cs",
               "RelativeDocumentMoniker": "ConsoleApp3\\Program.cs",
-              "ToolTip": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Program.cs",
+              "ToolTip": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Program.cs",
               "RelativeToolTip": "ConsoleApp3\\Program.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAQwGkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:08:40.325Z"
+              "WhenOpened": "2025-10-02T09:08:40.325Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TextParser.cs",
-              "DocumentMoniker": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\TextParser.cs",
+              "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\TextParser.cs",
               "RelativeDocumentMoniker": "ConsoleApp3\\TextParser.cs",
-              "ToolTip": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\TextParser.cs",
+              "ToolTip": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\TextParser.cs",
               "RelativeToolTip": "ConsoleApp3\\TextParser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -67,63 +68,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Sentence.cs",
-              "DocumentMoniker": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Models\\Sentence.cs",
+              "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Models\\Sentence.cs",
               "RelativeDocumentMoniker": "ConsoleApp3\\Models\\Sentence.cs",
-              "ToolTip": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Models\\Sentence.cs",
+              "ToolTip": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Models\\Sentence.cs",
               "RelativeToolTip": "ConsoleApp3\\Models\\Sentence.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAkwDEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA5wDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:10:37.258Z"
+              "WhenOpened": "2025-10-02T09:10:37.258Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Token.cs",
-              "DocumentMoniker": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Models\\Token.cs",
+              "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Models\\Token.cs",
               "RelativeDocumentMoniker": "ConsoleApp3\\Models\\Token.cs",
-              "ToolTip": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Models\\Token.cs",
+              "ToolTip": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Models\\Token.cs",
               "RelativeToolTip": "ConsoleApp3\\Models\\Token.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:33:26.293Z"
+              "WhenOpened": "2025-10-02T09:33:26.293Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Word.cs",
-              "DocumentMoniker": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Models\\Word.cs",
+              "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Models\\Word.cs",
               "RelativeDocumentMoniker": "ConsoleApp3\\Models\\Word.cs",
-              "ToolTip": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Models\\Word.cs",
+              "ToolTip": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Models\\Word.cs",
               "RelativeToolTip": "ConsoleApp3\\Models\\Word.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:10:03.689Z"
+              "WhenOpened": "2025-10-02T09:10:03.689Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Punctuation.cs",
-              "DocumentMoniker": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Models\\Punctuation.cs",
+              "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Models\\Punctuation.cs",
               "RelativeDocumentMoniker": "ConsoleApp3\\Models\\Punctuation.cs",
-              "ToolTip": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Models\\Punctuation.cs",
+              "ToolTip": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Models\\Punctuation.cs",
               "RelativeToolTip": "ConsoleApp3\\Models\\Punctuation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:10:26.566Z"
+              "WhenOpened": "2025-10-02T09:10:26.566Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Text.cs",
-              "DocumentMoniker": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Models\\Text.cs",
+              "DocumentMoniker": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Models\\Text.cs",
               "RelativeDocumentMoniker": "ConsoleApp3\\Models\\Text.cs",
-              "ToolTip": "C:\\Users\\veroni4ka\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ConsoleApp3\\ConsoleApp3\\Models\\Text.cs",
+              "ToolTip": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Models\\Text.cs",
               "RelativeToolTip": "ConsoleApp3\\Models\\Text.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAIAwwDYAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAmwKwAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:10:55.889Z"
+              "WhenOpened": "2025-10-02T09:10:55.889Z",
+              "EditorCaption": ""
             }
           ]
         }

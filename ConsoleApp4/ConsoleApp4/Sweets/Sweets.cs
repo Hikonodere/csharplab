@@ -1,41 +1,43 @@
 ﻿using System.Data;
-
-public abstract class Sweets
+namespace ConsoleApp4.Sweets
 {
-    public String Name {get; private set;}
-
-    public void nameSet(string newName)
+    public abstract class Sweets
     {
-        if (string.IsNullOrEmpty(newName))
+        public String Name { get; private set; }
+
+        public void nameSet(string newName)
         {
-            throw new ArgumentException("Некоректное имя.");
+            if (string.IsNullOrEmpty(newName))
+            {
+                throw new ArgumentException("Некоректное имя.");
+            }
+            Name = newName;
         }
-        Name = newName;
-    }
-    
-    public Dictionary<string, int> Compound { get; private set; }
-    public int Weight { get; private set; }
-    public void weightSet(int weight) 
-    {
-        if (weight <= 0)
+
+        public Dictionary<string, int> Compound { get; private set; }
+        public int Weight { get; private set; }
+        public void weightSet(int weight)
         {
-            throw new ArgumentException("Некоректный вес.");
+            if (weight <= 0)
+            {
+                throw new ArgumentException("Некоректный вес.");
+            }
+            Weight = weight;
         }
-        Weight = weight;
-    }
 
-    public Sweets(string name, Dictionary<string, int> compound, int weight )
-    {
-        nameSet(name);
-        Compound = compound;
-        weightSet(weight);
-    }
+        public Sweets(string name, Dictionary<string, int> compound, int weight)
+        {
+            nameSet(name);
+            Compound = compound;
+            weightSet(weight);
+        }
 
-    public virtual int GetSugarContent()
-    {
-        return Compound.ContainsKey("sugar") ? Compound["sugar"] : 0;
-    }
-    public override string ToString() => $"{GetType().Name}: {Name}";
+        public virtual int GetSugarContent()
+        {
+            return Compound.ContainsKey("sugar") ? Compound["sugar"] : 0;
+        }
+        public override string ToString() => $"{GetType().Name}: {Name}";
 
-    public abstract string GetDescription();
+        public abstract string GetDescription();
+    }
 }

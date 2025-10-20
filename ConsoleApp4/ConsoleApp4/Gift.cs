@@ -8,6 +8,12 @@ namespace ConsoleApp4
 {
     internal class Gift
     {
+        public int Weight { get; private set; }
+        public Dictionary<string, (string typ, int caunt)> Content { get; private set;}
+
+        public void CreateContent()
+        { 
         
+        }
     }
 }
