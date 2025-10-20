@@ -35,5 +35,7 @@ public abstract class Sweets
     {
         return Compound.ContainsKey("sugar") ? Compound["sugar"] : 0;
     }
-    public override string ToString() => $"{GetType().Name}: {Name}";    
+    public override string ToString() => $"{GetType().Name}: {Name}";
+
+    public abstract string GetDescription();
 }
