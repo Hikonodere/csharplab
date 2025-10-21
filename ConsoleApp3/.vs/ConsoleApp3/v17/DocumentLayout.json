@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "ConsoleApp3\\Program.cs",
               "ToolTip": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\Program.cs",
               "RelativeToolTip": "ConsoleApp3\\Program.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAQwGkAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-02T09:08:40.325Z",
               "EditorCaption": ""
@@ -61,7 +61,7 @@
               "RelativeDocumentMoniker": "ConsoleApp3\\TextParser.cs",
               "ToolTip": "C:\\csharplabrep\\ConsoleApp3\\ConsoleApp3\\TextParser.cs",
               "RelativeToolTip": "ConsoleApp3\\TextParser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-02T09:17:37.319Z",
               "EditorCaption": ""
@@ -76,8 +76,7 @@
               "RelativeToolTip": "ConsoleApp3\\Models\\Sentence.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAA5wDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:10:37.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T09:10:37.258Z"
             },
             {
               "$type": "Document",
@@ -89,8 +88,7 @@
               "RelativeToolTip": "ConsoleApp3\\Models\\Token.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:33:26.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T09:33:26.293Z"
             },
             {
               "$type": "Document",
@@ -102,8 +100,7 @@
               "RelativeToolTip": "ConsoleApp3\\Models\\Word.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:10:03.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T09:10:03.689Z"
             },
             {
               "$type": "Document",
@@ -115,8 +112,7 @@
               "RelativeToolTip": "ConsoleApp3\\Models\\Punctuation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:10:26.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T09:10:26.566Z"
             },
             {
               "$type": "Document",
@@ -128,8 +124,7 @@
               "RelativeToolTip": "ConsoleApp3\\Models\\Text.cs",
               "ViewState": "AgIAAKQAAAAAAAAAAAAmwKwAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T09:10:55.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T09:10:55.889Z"
             }
           ]
         }
