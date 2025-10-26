@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ConsoleApp4.Sweets;
 namespace ConsoleApp4
 {
-    internal class Gift
+    public class Gift
     {
         public int Weight { get; private set; }
         public Dictionary<Sweets.Sweets, int > Content { get; private set;}
@@ -15,6 +15,11 @@ namespace ConsoleApp4
         {
             Weight = weight;
             Content = CreateContent(weight, sweets);
+        }
+        public Gift(int weight, Dictionary<Sweets.Sweets, int> content)
+        {
+            Weight = weight;
+            Content = content;
         }
 
         private Dictionary<Sweets.Sweets, int> CreateContent(int giftWeight, List<Sweets.Sweets> sweets)

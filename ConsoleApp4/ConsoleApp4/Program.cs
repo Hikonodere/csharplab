@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using ConsoleApp4.Sweets;
+using System.Xml.Serialization;
+
 
 namespace ConsoleApp4
 {
     internal class Program
     {
-        private static string inputFileName = "Sweets.txt";
+
         private static List<Sweets.Sweets> sweets = new List<Sweets.Sweets>();
         private static List<Gift> gifts = new List<Gift>();
         static void Main()
@@ -34,101 +36,39 @@ namespace ConsoleApp4
         static List<Sweets.Sweets> GetSweets()
         {
             List<Sweets.Sweets> sweets = new List<Sweets.Sweets>();
-            string[] lines;
-            try
+            string xmlFileName = "sweets.xml";
+
+
+            if (!File.Exists(xmlFileName))
             {
-                lines = File.ReadAllLines(inputFileName);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка при чтении файла {inputFileName}: {ex.Message}");
-                return sweets;
+                throw new Exception($"Файл {xmlFileName} не найден.");
             }
 
-            string currentCategory = null;
-            string name = null;
-            int weight = 0;
-            Dictionary<string, int> compound = new();
+            var serializer = new XmlSerializer(typeof(List<SweetDTO>));
 
-            foreach (string rawLine in lines)
+            using (var stream = new FileStream(xmlFileName, FileMode.Open))
             {
-                string line = rawLine.Trim();
+                var sweetDTOs = (List<SweetDTO>)serializer.Deserialize(stream);
 
-                if (string.IsNullOrWhiteSpace(line) || line.StartsWith("=") || line.StartsWith("-"))
-                    continue;
-
-                string key = line.Contains(':') ? line.Split(':')[0].Trim() : "";
-                string value = line.Contains(':') ? line.Split(':', 2)[1].Trim() : "";
-
-                switch (key.ToLower())
+                foreach (var sweetDTO in sweetDTOs)
                 {
-                    case "категория":
-                        currentCategory = value;
-                        break;
+                    try
+                    {
+                        var sweet = DtoConverter.FromDTO(sweetDTO);
+                        sweets.Add(sweet);
 
-                    case "название":
-                        name = value;
-                        compound = new Dictionary<string, int>();
-                        break;
-
-                    case "вес":
-                        string weightStr = Regex.Match(value, @"\d+").Value;
-                        weight = int.Parse(weightStr);
-                        break;
-
-                    case "состав":
-                        string[] parts = value.Split(',', StringSplitOptions.RemoveEmptyEntries);
-
-                        foreach (var part in parts)
-                        {
-                            var p = part.Trim().Split(' ');
-                            string compKey = p[0];
-                            int compValue = Regex.Match(part, @"\d+").Success
-                                ? int.Parse(Regex.Match(part, @"\d+").Value)
-                                : 0;
-                            compound[compKey.ToLower()] = compValue;
-                        }
-
-                        if (currentCategory != null && name != null && weight > 0)
-                        {
-                            try
-                            {
-                                sweets.Add(CreateSweet(currentCategory, name, compound, weight));
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine($"Ошибка при чтении файла {inputFileName}: {ex.Message}");
-                                Console.WriteLine($"Обыект {currentCategory} {name} не будет добавлен так-как он не валидный");
-                            }
-                            name = null;
-                            weight = 0;
-                            compound = new();
-                            
-                            
-                        }
-                        break;
-
-                    default:
-                        break;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Ошибка при создании сладости '{sweetDTO.Name}': {ex.Message}");
+                        continue;
+                    }
                 }
             }
-
-
+            Console.WriteLine($"Успешно загружено {sweets.Count} сладостей из XML");
             return sweets;
         }
 
-        private static Sweets.Sweets CreateSweet(string category, string name, Dictionary<string, int> compound, int weight)
-        {
-            return category.ToLower() switch
-            {
-                "шоколад" => new Chocolate(name, compound, weight, 50),
-                "карамель" => new Caramel(name, compound, weight, "Без начинки"),
-                "желейные конфеты" => new JellyCandy(name, compound, weight, "Фруктовые"),
-                "печенье" => new Cookie(name, compound, weight, "Классическое"),
-                "ирис" => new Caramel(name, compound, weight, "Сливочный"),
-                _ => throw new Exception($"Неизвестная категория: {category}")
-            };
-        }
         private static void RunMenu()
         {
             Console.WriteLine("====МЕНЮ====\n" +
@@ -137,6 +77,8 @@ namespace ConsoleApp4
                 "3.Показать список сладостей\n" +
                 "4.Узнать данные по конкретному подарку\n" +
                 "5.Показать список подарков\n" +
+                "6.Сохранить подарки в XML\n" +
+                "7.Подгрузить ранее созданные подарки\n" +
                 "0.Выход из программы");
             
             string choice = Console.ReadLine();
@@ -145,7 +87,7 @@ namespace ConsoleApp4
                 case "1":
                     Console.WriteLine("Введите вес для нового подарка");
                     string input = Console.ReadLine();
-                    if (!(int.TryParse(input, out int weight) && weight >= 1))
+                    if (!int.TryParse(input, out int weight) || weight < 1)
                     {
                         throw new Exception("Некоретный ввод");
                     }
@@ -254,7 +196,19 @@ namespace ConsoleApp4
                         Console.WriteLine("Список подарков:\n");
                         Console.WriteLine($" {gift}");
                     }
-                    break;  
+                    break;
+
+                case "6":
+                    var dtoList = gifts.Select(g => DtoConverter.ToDTO(g)).ToList();
+                    var serializer = new XmlSerializer(typeof(List<GiftDTO>));
+                    using (var stream = new FileStream("gifts.xml", FileMode.Create))
+                    {
+                        serializer.Serialize(stream, dtoList);
+                    }
+                    break;
+                case "7":
+                      gifts.AddRange(DtoConverter.LoadGifts()); 
+                      break;
                 case "0":
                     return;
                 default:
