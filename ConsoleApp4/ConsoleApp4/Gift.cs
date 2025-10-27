@@ -7,7 +7,7 @@ using ConsoleApp4.Sweets;
 namespace ConsoleApp4
 {
     public class Gift
-    {
+    {   
         public int Weight { get; private set; }
         public Dictionary<Sweets.Sweets, int > Content { get; private set;}
 
@@ -26,6 +26,7 @@ namespace ConsoleApp4
         {
             var content = new Dictionary<Sweets.Sweets, int>();
             int remainingWeight = giftWeight;
+            
 
             while (true)
             {
@@ -48,7 +49,7 @@ namespace ConsoleApp4
                 {
                     
                     int currentWeight = giftWeight - remainingWeight;
-                    if (currentWeight < giftWeight * 0.9)
+                    if (remainingWeight >= GetSweetMinWeight(sweets))
                     {
                         Console.WriteLine($"Подарок слишком лёгкий ({currentWeight} г). Добавьте ещё сладостей.");
                         continue;
@@ -58,6 +59,7 @@ namespace ConsoleApp4
 
                 var selectedSweet = sweets[choice - 1];
                 int maxCount = remainingWeight / selectedSweet.Weight;
+
                 if (maxCount == 0)
                 {
                     Console.WriteLine("Эта сладость слишком тяжёлая для оставшегося веса. Выберите другую.");
@@ -101,8 +103,13 @@ namespace ConsoleApp4
         public override string ToString()
         {
             int totalWeight = Content.Sum(item => item.Key.Weight * item.Value);
-            string contentInfo = string.Join(", ", Content.Select(item => $"{item.Key.Name} x{item.Value}"));
-            return $"Подарок {Weight}г (факт: {totalWeight}г): {contentInfo}";
+            string contentInfo = string.Join("\n", Content.Select(item => $"{item.Key.Name} x{item.Value}"));
+            return $"Подарок {Weight}г (факт: {totalWeight}г): \n{contentInfo}";
+        }
+
+        public int GetSweetMinWeight(List<Sweets.Sweets> sweets)
+        {
+            return (sweets.Min(sweet => sweet.Weight));
         }
     
 
