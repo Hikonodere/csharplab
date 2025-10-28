@@ -12,10 +12,9 @@ namespace ConsoleApp4
         public int Weight { get; private set; }
         public Dictionary<Sweets.Sweets, int > Content { get; private set;}
 
-        public Gift(int weight, List<Sweets.Sweets> sweets)
+        public Gift(List<Sweets.Sweets> sweets)
         {
-            Weight = weight;
-            Content = CreateContent(weight, sweets);
+            (Content, Weight) = CreateContent(sweets);
         }
         public Gift(int weight, Dictionary<Sweets.Sweets, int> content)
         {
@@ -23,20 +22,29 @@ namespace ConsoleApp4
             Content = content;
         }
 
-        private Dictionary<Sweets.Sweets, int> CreateContent(int giftWeight, List<Sweets.Sweets> sweets)
+        private (Dictionary<Sweets.Sweets, int> Content, int Weight) CreateContent(List<Sweets.Sweets> sweets)
         {
             var content = new Dictionary<Sweets.Sweets, int>();
-            int remainingWeight = giftWeight;
             var random = new Random();
-
+            int weight = 0;
             while (true)
             {
                 Console.WriteLine("Сгенерировать подарок(y/n)?");
                 string answer = Console.ReadLine().Trim().ToLower();
+                
+                
                 switch (answer)
                 {
                     case "y":
+                        Console.WriteLine("Введите примерный вес для генерации");
+                        string input = Console.ReadLine();
+                        if (!int.TryParse(input, out weight) || weight < 1)
+                        {
+                            throw new Exception("Некоретный ввод");
+                        }
+                        int remainingWeight = weight;
                         var shuffled = sweets.OrderBy(x => random.Next()).ToList();
+                        weight = 0;
                         while (remainingWeight >= GetSweetMinWeight(sweets))
                         {
                             foreach (var sweet in shuffled)
@@ -49,6 +57,7 @@ namespace ConsoleApp4
                                         content[sweet] = 1;
 
                                     remainingWeight -= sweet.Weight;
+                                    weight += sweet.Weight;
                                 }
                             }
                         }
@@ -57,6 +66,7 @@ namespace ConsoleApp4
                         break;
 
                     case "n":
+                        weight = 0;
                         while (true)
                         {
                             Console.WriteLine("\nСписок сладостей:");
@@ -67,7 +77,7 @@ namespace ConsoleApp4
                             }
                             PrintTableFooter();
 
-                            Console.WriteLine($"Оставшийся вес подарка: {remainingWeight} г");
+                            Console.WriteLine($"Текущий вес подарка: {weight} г");
                             Console.WriteLine("Введите номер сладости для добавления (0 для завершения):");
 
                             if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 0 || choice > sweets.Count)
@@ -78,27 +88,19 @@ namespace ConsoleApp4
 
                             if (choice == 0)
                             {
-
-                                int currentWeight = giftWeight - remainingWeight;
-                                if (remainingWeight >= GetSweetMinWeight(sweets))
+                                if (weight <= GetSweetMinWeight(sweets))
                                 {
-                                    Console.WriteLine($"Подарок слишком лёгкий ({currentWeight} г). Добавьте ещё сладостей.");
+                                    Console.WriteLine($"Подарок слишком лёгкий ({weight} г). Добавьте ещё сладостей.");
                                     continue;
                                 }
                                 break;
                             }
 
                             var selectedSweet = sweets[choice - 1];
-                            int maxCount = remainingWeight / selectedSweet.Weight;
+                           
 
-                            if (maxCount == 0)
-                            {
-                                Console.WriteLine("Эта сладость слишком тяжёлая для оставшегося веса. Выберите другую.");
-                                continue;
-                            }
-
-                            Console.WriteLine($"Сколько штук {selectedSweet.Name} добавить? (не больше {maxCount}):");
-                            if (!int.TryParse(Console.ReadLine(), out int count) || count <= 0 || count > maxCount)
+                            Console.WriteLine($"Сколько штук {selectedSweet.Name} добавить?:");
+                            if (!int.TryParse(Console.ReadLine(), out int count) || count <= 0)
                             {
                                 Console.WriteLine("Неверное количество, попробуйте снова.");
                                 continue;
@@ -109,7 +111,7 @@ namespace ConsoleApp4
                             else
                                 content[selectedSweet] = count;
 
-                            remainingWeight -= selectedSweet.Weight * count;
+                            weight += selectedSweet.Weight * count;
                         }
                         Console.WriteLine($"Подарок созданан");
                         break;
@@ -120,11 +122,11 @@ namespace ConsoleApp4
                 }
                 break ;
             }
-            return content;
+            return (content, weight);
         }
         public List<Sweets.Sweets> GetSweetsSortedByWeight()
         {
-            return Content.Keys.OrderBy(sweet => sweet.Weight).ToList();
+            return Content.Keys.OrderBy(sweet => sweet).ToList();
         }
 
         public List<Sweets.Sweets> FindSweetsBySugarRange(int minSugar, int maxSugar)
@@ -141,9 +143,8 @@ namespace ConsoleApp4
 
         public override string ToString()
         {
-            int totalWeight = Content.Sum(item => item.Key.Weight * item.Value);
             string contentInfo = string.Join("\n", Content.Select(item => $"{item.Key.Name} x{item.Value}"));
-            return $"Подарок {Weight}г (факт: {totalWeight}г): \n{contentInfo}";
+            return $"Подарок {Weight}г : \n{contentInfo}";
         }
 
         public int GetSweetMinWeight(List<Sweets.Sweets> sweets)
