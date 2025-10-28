@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ConsoleApp4.Sweets;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleApp4.Sweets;
 namespace ConsoleApp4
 {
     public class Gift
@@ -26,61 +27,99 @@ namespace ConsoleApp4
         {
             var content = new Dictionary<Sweets.Sweets, int>();
             int remainingWeight = giftWeight;
-            
+            var random = new Random();
 
             while (true)
             {
-                Console.WriteLine("\nСписок сладостей:");
-                for (int i = 0; i < sweets.Count; i++)
+                Console.WriteLine("Сгенерировать подарок(y/n)?");
+                string answer = Console.ReadLine().Trim().ToLower();
+                switch (answer)
                 {
-                    Console.WriteLine($"{i + 1}. {sweets[i].GetDescription()}");
-                }
+                    case "y":
+                        var shuffled = sweets.OrderBy(x => random.Next()).ToList();
+                        while (remainingWeight >= GetSweetMinWeight(sweets))
+                        {
+                            foreach (var sweet in shuffled)
+                            {
+                                if (remainingWeight - sweet.Weight >= 0)
+                                {
+                                    if (content.ContainsKey(sweet))
+                                        content[sweet] += 1;
+                                    else
+                                        content[sweet] = 1;
 
-                Console.WriteLine($"Оставшийся вес подарка: {remainingWeight} г");
-                Console.WriteLine("Введите номер сладости для добавления (0 для завершения):");
+                                    remainingWeight -= sweet.Weight;
+                                }
+                            }
+                        }
+                        Console.WriteLine($"Подарок созданан"); 
 
-                if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 0 || choice > sweets.Count)
-                {
-                    Console.WriteLine("Неверный ввод, попробуйте снова.");
-                    continue;
-                }
+                        break;
 
-                if (choice == 0)
-                {
-                    
-                    int currentWeight = giftWeight - remainingWeight;
-                    if (remainingWeight >= GetSweetMinWeight(sweets))
-                    {
-                        Console.WriteLine($"Подарок слишком лёгкий ({currentWeight} г). Добавьте ещё сладостей.");
+                    case "n":
+                        while (true)
+                        {
+                            Console.WriteLine("\nСписок сладостей:");
+                            PrintTableHeader();
+                            for (int i = 0; i < sweets.Count; i++)
+                            {
+                                Console.WriteLine($"{i + 1,2}. {sweets[i].GetDescription()}");
+                            }
+                            PrintTableFooter();
+
+                            Console.WriteLine($"Оставшийся вес подарка: {remainingWeight} г");
+                            Console.WriteLine("Введите номер сладости для добавления (0 для завершения):");
+
+                            if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 0 || choice > sweets.Count)
+                            {
+                                Console.WriteLine("Неверный ввод, попробуйте снова.");
+                                continue;
+                            }
+
+                            if (choice == 0)
+                            {
+
+                                int currentWeight = giftWeight - remainingWeight;
+                                if (remainingWeight >= GetSweetMinWeight(sweets))
+                                {
+                                    Console.WriteLine($"Подарок слишком лёгкий ({currentWeight} г). Добавьте ещё сладостей.");
+                                    continue;
+                                }
+                                break;
+                            }
+
+                            var selectedSweet = sweets[choice - 1];
+                            int maxCount = remainingWeight / selectedSweet.Weight;
+
+                            if (maxCount == 0)
+                            {
+                                Console.WriteLine("Эта сладость слишком тяжёлая для оставшегося веса. Выберите другую.");
+                                continue;
+                            }
+
+                            Console.WriteLine($"Сколько штук {selectedSweet.Name} добавить? (не больше {maxCount}):");
+                            if (!int.TryParse(Console.ReadLine(), out int count) || count <= 0 || count > maxCount)
+                            {
+                                Console.WriteLine("Неверное количество, попробуйте снова.");
+                                continue;
+                            }
+
+                            if (content.ContainsKey(selectedSweet))
+                                content[selectedSweet] += count;
+                            else
+                                content[selectedSweet] = count;
+
+                            remainingWeight -= selectedSweet.Weight * count;
+                        }
+                        Console.WriteLine($"Подарок созданан");
+                        break;
+
+                    default:
+                        Console.WriteLine("Введено некоректное значение!!!");
                         continue;
-                    }
-                    break;
                 }
-
-                var selectedSweet = sweets[choice - 1];
-                int maxCount = remainingWeight / selectedSweet.Weight;
-
-                if (maxCount == 0)
-                {
-                    Console.WriteLine("Эта сладость слишком тяжёлая для оставшегося веса. Выберите другую.");
-                    continue;
-                }
-
-                Console.WriteLine($"Сколько штук {selectedSweet.Name} добавить? (не больше {maxCount}):");
-                if (!int.TryParse(Console.ReadLine(), out int count) || count <= 0 || count > maxCount)
-                {
-                    Console.WriteLine("Неверное количество, попробуйте снова.");
-                    continue;
-                }
-
-                if (content.ContainsKey(selectedSweet))
-                    content[selectedSweet] += count;
-                else
-                    content[selectedSweet] = count;
-
-                remainingWeight -= selectedSweet.Weight * count;
+                break ;
             }
-
             return content;
         }
         public List<Sweets.Sweets> GetSweetsSortedByWeight()
@@ -111,7 +150,18 @@ namespace ConsoleApp4
         {
             return (sweets.Min(sweet => sweet.Weight));
         }
-    
+
+        public static void PrintTableHeader()
+        {
+            Console.WriteLine("    ┌───────────────────┬──────────────────────-──────────┬────────┬────────┐");
+            Console.WriteLine("    │ Название          │ Тип                             │ Вес    │ Сахар  │");
+            Console.WriteLine("    ├───────────────────┼─────────────────────────────────┼────────┼────────┤");
+        }
+
+        public static void PrintTableFooter()
+        {
+            Console.WriteLine("    └───────────────────┴──────────────────────-──────────┴────────┴────────┘");
+        }
 
     }
 }
