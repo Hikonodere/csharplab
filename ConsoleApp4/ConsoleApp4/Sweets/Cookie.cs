@@ -7,6 +7,12 @@ namespace ConsoleApp4.Sweets
     {
         public string Shape { get; private set; }
 
+        public static Cookie CreateCookieFromInput(string name, Dictionary<string, int> compound, int weight)
+        {
+            Console.Write("Введите форму: ");
+            var shape = Console.ReadLine();
+            return new Cookie(name, compound, weight, shape);
+        }
         public Cookie(string name, Dictionary<string, int> compound, int weight, string shape)
             : base(name, compound, weight)
         {

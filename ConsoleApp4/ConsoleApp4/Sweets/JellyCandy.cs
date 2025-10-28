@@ -7,6 +7,13 @@ namespace ConsoleApp4.Sweets
     {
         public string Flavor { get; private set; }
 
+        public static JellyCandy CreateJellyFromInput(string name, Dictionary<string, int> compound, int weight)
+        {
+            Console.Write("Введите вкус: ");
+            var flavor = Console.ReadLine();
+            return new JellyCandy(name, compound, weight, flavor);
+        }
+
         public JellyCandy(string name, Dictionary<string, int> compound, int weight, string flavor)
             : base(name, compound, weight)
         {

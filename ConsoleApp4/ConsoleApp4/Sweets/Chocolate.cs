@@ -8,6 +8,17 @@ namespace ConsoleApp4.Sweets
     {
         public int CocoaPercent { get; private set; }
 
+        public static Chocolate CreateChocolateFromInput(string name, Dictionary<string, int> compound, int weight)
+        {
+            Console.Write("Введите процент какао: ");
+            var cocoa = int.Parse(Console.ReadLine());
+            if (cocoa < 0)
+            {
+                throw new ArgumentException("Некоректное содержание какао");
+            }
+            return new Chocolate(name, compound, weight, cocoa);
+        }
+
         public Chocolate(string name, Dictionary<string, int> compound, int weight, int cocoaPercent)
             : base(name, compound, weight)
         {
