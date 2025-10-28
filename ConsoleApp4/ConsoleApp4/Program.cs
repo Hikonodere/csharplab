@@ -91,7 +91,9 @@ namespace ConsoleApp4
                     {
                         throw new Exception("Некоретный ввод");
                     }
-                    gifts.Add(new Gift(weight, sweets));
+                    var newGift = new Gift(weight, sweets);
+                    gifts.Add(newGift);
+                    Console.WriteLine(newGift);
                     break;
                 case "2":
                     for (int i = 0; i < gifts.Count; i++)
@@ -147,11 +149,13 @@ namespace ConsoleApp4
                             Console.WriteLine("\n--- Сортировка конфет по весу ---");
                             var sortedSweets = selectedGift.GetSweetsSortedByWeight();
                             Console.WriteLine("Сладости в подарке отсортированные по весу:");
+                            Gift.PrintTableHeader();
                             foreach (var sweet in sortedSweets)
                             {
                                 int count = selectedGift.GetSweetCount(sweet);
-                                Console.WriteLine($"  {sweet.GetDescription()} (в подарке: {count} шт.)");
+                                Console.WriteLine($"    {sweet.GetDescription()} (в подарке: {count} шт.)");
                             }
+                            Gift.PrintTableFooter();
                             break;
 
                         case "2":
