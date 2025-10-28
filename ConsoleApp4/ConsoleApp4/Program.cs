@@ -179,13 +179,15 @@ namespace ConsoleApp4
                             }
                             else
                             {
+                                Gift.PrintTableHeader();
                                 Console.WriteLine($"Найдены сладости с содержанием сахара от {minSugar}г до {maxSugar}г:");
                                 foreach (var sweet in sweetsInRange)
                                 {
                                     int count = selectedGift.GetSweetCount(sweet);
                                     int sugar = sweet.GetSugarContent();
-                                    Console.WriteLine($"  {sweet.GetDescription()} (в подарке: {count} шт., сахар: {sugar}г)");
+                                    Console.WriteLine($"    {sweet.GetDescription()} (в подарке: {count} шт., сахар: {sugar}г)");
                                 }
+                                Gift.PrintTableFooter() ;
                             }
                             break;
 
