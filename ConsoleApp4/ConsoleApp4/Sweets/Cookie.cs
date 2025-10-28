@@ -18,7 +18,7 @@ namespace ConsoleApp4.Sweets
 
         public override string GetDescription()
         {
-            return $"{Name} — печенье в форме {Shape}. Вес: {Weight} г, сахар: {GetSugarContent()} г.";
+            return $"│ {Name,-17} │ Печенье {Shape,-23} │ {Weight,4} г │ {GetSugarContent(),4} г │";
         }
     }
 }

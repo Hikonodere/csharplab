@@ -19,7 +19,7 @@ namespace ConsoleApp4.Sweets
 
         public override string GetDescription()
         {
-            return $"{Name} — шоколад с содержанием какао {CocoaPercent}%. Вес: {Weight} г, сахар: {GetSugarContent()} г.";
+            return $"│ {Name,-17} │ Шоколад {CocoaPercent,2}% какао {new string(' ',13)} │ {Weight,4} г │ {GetSugarContent(),4} г │";
         }
     }
 }
