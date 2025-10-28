@@ -13,11 +13,14 @@ namespace ConsoleApp4
 
         private static List<Sweets.Sweets> sweets = new List<Sweets.Sweets>();
         private static List<Gift> gifts = new List<Gift>();
+        private static bool shouldExit = false;
         static void Main()
         {   
             
             sweets = GetSweets();
-            while (true)
+            gifts.AddRange(DtoConverter.LoadGifts());
+            Console.WriteLine($"Успешно загружено {gifts.Count} раннее созданых подарков из XML");
+            while (!shouldExit)
             {
                 try
                 {
@@ -30,8 +33,6 @@ namespace ConsoleApp4
                 }
             }
         }
-
-
 
         static List<Sweets.Sweets> GetSweets()
         {
@@ -77,32 +78,32 @@ namespace ConsoleApp4
                 "3.Показать список сладостей\n" +
                 "4.Узнать данные по конкретному подарку\n" +
                 "5.Показать список подарков\n" +
-                "6.Сохранить подарки в XML\n" +
-                "7.Подгрузить ранее созданные подарки\n" +
+                "6.Добавить конфету\n"+
+                "7.Удалить конфету\n"+
                 "0.Выход из программы");
             
             string choice = Console.ReadLine();
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine("Введите вес для нового подарка");
-                    string input = Console.ReadLine();
-                    if (!int.TryParse(input, out int weight) || weight < 1)
-                    {
-                        throw new Exception("Некоретный ввод");
-                    }
-                    var newGift = new Gift(weight, sweets);
+                    
+                    var newGift = new Gift(sweets);
                     gifts.Add(newGift);
                     Console.WriteLine(newGift);
                     break;
                 case "2":
+                    if (!(gifts.Count > 0))
+                    {
+                        throw new Exception("Список подарков пуст");
+                    }
+
                     for (int i = 0; i < gifts.Count; i++)
                     {
                         Console.WriteLine("Список подарков:\n");
                         Console.WriteLine($"{i} {gifts[i]}");
                     }
                     Console.WriteLine("Введите индекс подарка для удаления");
-                    input = Console.ReadLine();
+                    string input = Console.ReadLine();
                     if (!(int.TryParse(input, out int index) && index >= 0 && index < gifts.Count))
                     {
                         throw new Exception("Некоретный ввод");
@@ -197,30 +198,72 @@ namespace ConsoleApp4
                     }
                     break;
                 case "5":
+                    if (!(gifts.Count > 0))
+                    {
+                        throw new Exception("Список подарков пуст");
+                    }
                     foreach (var gift in gifts)
                     {
                         Console.WriteLine("Список подарков:\n");
                         Console.WriteLine($" {gift}");
                     }
                     break;
-
                 case "6":
-                    var dtoList = gifts.Select(g => DtoConverter.ToDTO(g)).ToList();
-                    var serializer = new XmlSerializer(typeof(List<GiftDTO>));
-                    using (var stream = new FileStream("gifts.xml", FileMode.Create))
+                    try
                     {
-                        serializer.Serialize(stream, dtoList);
+                        Sweets.Sweets newSweet = Sweets.Sweets.CreateSweetFromUserInput();
+                        sweets.Add(newSweet);
+                        Console.WriteLine($" Сладость '{newSweet.Name}' успешно добавлена в коллекцию!");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($" Ошибка: {ex.Message}");
                     }
                     break;
+
                 case "7":
-                      gifts.AddRange(DtoConverter.LoadGifts()); 
-                      break;
+                    for (int i = 0; i < gifts.Count; i++)
+                    {
+                        Console.WriteLine("Список сладостей:\n");
+                        Console.WriteLine($"{i} {sweets[i]}");
+                    }
+                    Console.WriteLine("Введите индекс подарка для удаления");
+                    input = Console.ReadLine();
+                    if (!(int.TryParse(input, out index) && index >= 0 && index < sweets.Count))
+                    {
+                        throw new Exception("Некоретный ввод");
+                    }
+                    sweets.RemoveAt(index);
+                    break;
+
+
                 case "0":
-                    return;
+                    Console.WriteLine("Сохранить изменения(y/n)?");
+                    string answer = Console.ReadLine().Trim().ToLower();
+                    if (answer == "y")
+                    {
+                        var dtoGiftsList = gifts.Select(g => DtoConverter.ToDTO(g)).ToList();
+                        var serializer = new XmlSerializer(typeof(List<GiftDTO>));
+                        using (var stream = new FileStream("gifts.xml", FileMode.Create))
+                        {
+                            serializer.Serialize(stream, dtoGiftsList);
+                        }
+                        
+                        var dtoSweetsList = sweets.Select(g => DtoConverter.ToDTO(g)).ToList();
+                        serializer = new XmlSerializer(typeof(List<SweetDTO>));
+                        using (var stream = new FileStream("sweets.xml", FileMode.Create))
+                        {
+                            serializer.Serialize(stream, dtoSweetsList);
+                        }
+                    }
+                    shouldExit = true;
+                    break;
+
                 default:
                     Console.WriteLine("Неверный выбор, попробуйте снова.");
                     break;
             }
         }
+        
     }
 }
